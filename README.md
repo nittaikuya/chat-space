@@ -3,7 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false, unique: true|
-|username|string|null: false, add_index: true|
+|name|string|null: false, add_index: true|
 ### Association
 - has_many :messages
 - has_many :group_users
@@ -21,7 +21,7 @@
 
 ## groupテーブル
 |Column|Type|option|
-|group_name|string|null: false, unque: ttrue|
+|name|string|null: false, unque: ttrue|
 
 ## Association
 - has_many :groups_users
