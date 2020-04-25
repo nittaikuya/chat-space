@@ -21,6 +21,7 @@
 
 ## groupテーブル
 |Column|Type|option|
+|------|----|------|
 |name|string|null: false, unque: ttrue|
 
 ## Association
