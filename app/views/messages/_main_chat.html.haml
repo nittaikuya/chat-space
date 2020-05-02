@@ -1,39 +1,28 @@
 .chat-main
- .chat-main__header
-  .chat-main__header-left-box
-   %h2.chat-main__header-left-box__current-group
-    aloha
-   %ul.chat-main__header-left-box__member-list
-    Member : 
-    %li.chat-main__header-left-box__member-list__member
-     ikuya
-    %li.chat-main__header-left-box__member-list__member
-     nitta
-  .chat-main__header__edit-btn<Edit
- .chat-main__chats
-  .chat-main__chat
-   .chat-main__chat__upper-info
-    .chat-main__chat__upper-info__talker
-     ikuya
-    .chat-main__chat__upper-info__date
-     2020/04/28(Tue) 11:45:41
-   .chat-main__chat__text
-    おはようございます！
+  .chat-main__header
+    .chat-main__header-left-box
+      %h2.chat-main__header-left-box__current-group
+        aloha
+      %ul.chat-main__header-left-box__member-list
+        Member : 
+        %li.chat-main__header-left-box__member-list__member
+          ikuya
+        %li.chat-main__header-left-box__member-list__member
+          nitta
+    .chat-main__header__edit-btn<Edit
 
-  .chat-main__chat
-   .chat-main__chat__upper-info
-    .chat-main__chat__upper-info__talker
-     ikuya
-    .chat-main__chat__upper-info__date
-     2020/04/28(Tue) 11:45:41
-   .chat-main__chat__text
-    おはようございます！
+  .chat-main__chats
 
- .chat-main__chat-forms
-  %form.new_message
-   .input-box
-    %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-    %label{class: "input-box__image"}
-     = icon('far', 'image')
-     %input{type: "file", class: "input-box__image__file"}
-    %input{type: "submit", class: "submit-btn"}
+    .messages 
+      = render @messages
+
+
+  .chat-main__chat-forms
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+      .input-box
+        = f.label :image, class: "input-box__image" do
+          = icon('far', 'image', class: 'icon')
+        = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
+ 

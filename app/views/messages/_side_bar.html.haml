@@ -12,8 +12,8 @@
     .side-bar__chat
       - current_user.groups.each do |group|
         .group
-          = link_to '#' do
+          = link_to group_messages_path(group) do
             .chat__name
               = group.name
             .chate__message
-              メッセージはまだありません。
+              = group.show_last_message
