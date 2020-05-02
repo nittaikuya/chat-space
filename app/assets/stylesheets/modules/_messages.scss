@@ -1,8 +1,10 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .side-bar {
+  color: #ffffff;
   background-color: #253141;
   width: 300px;
   height: 100vh;
@@ -37,8 +39,8 @@
         line-height: 20px;
 
         .group {
-          color: #ffffff;
           text-decoration: none;
+          color: #ffffff;
         }
       }
     }
@@ -56,14 +58,22 @@
       padding-top: 20px;
       margin: 0px 0px 40px;
 
-      &-name {
-        font-size: 15px;
-        padding: 0px 0px 5px;
+      a {
+        color: #ffffff;
+        padding-left: 20px;
+        padding-top: 20px;
+        margin: 0px 0px 40px;
+  
       }
 
-      &-message {
-        font-size: 11px;
-      }
+        &-name {
+          font-size: 15px;
+          padding: 0px 0px 5px;
+        }
+
+        &-message {
+          font-size: 11px;
+        }
     }
   }
 }
@@ -88,7 +98,6 @@
       &__current-group {
         color: #333333;
         font-size: 20px;
-        padding-bottom: 15px;
         font-weight: normal;
       }
 
