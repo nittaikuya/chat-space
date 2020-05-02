@@ -1,22 +1,19 @@
 .side-bar
- .side-bar__header
-  .top-items
-   .top-items__name
-    = current_user.name
-   .top-items__icons
-    = link_to "#", class:"group" do
-     = icon('far', 'edit')
-    = link_to "edit_user_path(current_user)", class:"group" do
-     = icon('fas', 'cog')
- .side-bar__chats
-  .side-bar__chat
-   %p.side-bar__chat-name
-    techcamp
-   %p.side-bar__chat-message
-    まだメッセージはありません
-
-  .side-bar__chat
-   %p.side-bar__chat-name
-    techcamp
-   %p.side-bar__chat-message
-    まだメッセージはありません
+  .side-bar__header
+    .top-items
+      .top-items__name
+        = current_user.name
+      .top-items__icons
+        = link_to new_group_path, class:"group" do
+          = icon('far', 'edit')
+        = link_to "edit_user_path(current_user)", class:"group" do
+          = icon('fas', 'cog')
+  .side-bar__chats
+    .side-bar__chat
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            .chat__name
+              = group.name
+            .chate__message
+              メッセージはまだありません。
