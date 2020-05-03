@@ -112,6 +112,10 @@
           font-size: 12px;
           color: #999999;
           margin: 0px 0px 0px 4.8px;
+ 
+          .header_name {
+            margin-right: 4.8px;
+          }
         }
       }
     }
@@ -125,6 +129,10 @@
       position: absolute;
       right: 40px;
       color: #38aef0;
+
+      a {
+        color: #38aef0;
+      }
     }
   }
 

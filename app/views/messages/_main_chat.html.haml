@@ -2,14 +2,19 @@
   .chat-main__header
     .chat-main__header-left-box
       %h2.chat-main__header-left-box__current-group
-        aloha
+        = @group.name
       %ul.chat-main__header-left-box__member-list
         Member : 
         %li.chat-main__header-left-box__member-list__member
-          ikuya
-        %li.chat-main__header-left-box__member-list__member
-          nitta
-    .chat-main__header__edit-btn<Edit
+          - @group.users.each do |user|
+            = user.name
+            .member
+              = link_to root_path(user) do
+                .header_name
+
+    .chat-main__header__edit-btn
+      = link_to edit_group_path(@group)do
+        Edit
 
   .chat-main__chats
 
