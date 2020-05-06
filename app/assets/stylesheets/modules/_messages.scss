@@ -143,7 +143,7 @@
     overflow: scroll;
 
     .chat-main__chat {
-      margin: 0px 0px 40px;
+      margin: 0px 0px 10px;
       font-size: 16px;
 
       &__upper-info {
@@ -163,7 +163,7 @@
       }
 
       &__text {
-        margin: 0px 0px 10px;
+        margin: 0px 0px 40px;
         font-size: 14px;
       }
     }
@@ -179,7 +179,6 @@
       display: flex;
   
       .input-box {
-       width: 100%;
        display: flex;
   
         &__text {
