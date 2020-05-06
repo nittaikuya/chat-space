@@ -6,7 +6,7 @@
       .top-items__icons
         = link_to new_group_path, class:"group" do
           = icon('far', 'edit')
-        = link_to "edit_user_path(current_user)", class:"group" do
+        = link_to edit_user_path(current_user), class:"group" do
           = icon('fas', 'cog')
   .side-bar__chats
     .side-bar__chat
