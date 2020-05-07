@@ -55,15 +55,20 @@ $('#new_message').on('submit', function(e){
    
  })
   .done(function(data){
+    console.log("test2");
     var html = buildHTML(data);
     $('.messages').append(html);
     $('form')[0].reset();
-    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-    $('.submit-btn').prop('disabled', false);
+    $('.chat-main__chats').animate({ scrollTop: $('.chat-main__chats')[0].scrollHeight});
+    // $('.submit-btn').prop('disabled', false);
   })
   .fail(function() {
     alert("メッセージ送信に失敗しました");
-  });
+  })
+  .always(function(){
+    console.log("test");
+    $('.submit-btn').prop('disabled', false);
+  })
 })
 
   var reloadMessages = function() {

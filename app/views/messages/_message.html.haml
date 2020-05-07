@@ -5,8 +5,7 @@
         = message.user.name
       .chat-main__chat__upper-info__date
         = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  .chat-main__chat__text
-    - if message.content.present?
-      = message.content
-    = image_tag message.image.url, class: 'chat-main__chat__text' if message.image.present?
-    
+    .chat-main__chat__text
+      - if message.content.present?
+        = message.content
+        = image_tag message.image.url, class: 'chat-main__chat__text' if message.image.present?
