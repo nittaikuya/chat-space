@@ -66,7 +66,6 @@ $('#new_message').on('submit', function(e){
     alert("メッセージ送信に失敗しました");
   })
   .always(function(){
-    console.log("test");
     $('.submit-btn').prop('disabled', false);
   })
 })
