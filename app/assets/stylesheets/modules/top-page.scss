@@ -1,7 +1,58 @@
 .contents {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+
+
   .content {
+    background-image: url(../images/地球サンプル.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    height: 500px;
+    width: 100%;
     .header {
+      font-size: 25px;
+      text-align: center;
+      padding: 45px 20px;
+      margin: 0 auto;
+    }
+
+    .nav-box {
+      display: flex;
+      .top {
+        margin: 20px 40px;
+        width: 33%;
+        text-align: center;
+      }
+
+      .new-user {
+        margin: 20px 40px;
+        width: 33%;
+        text-align: center;
+      }
+      
+      .login {
+        margin: 20px 40px;
+        width: 34%;
+        text-align: center;
+      }
+    }
+
+
+    .main {
       font-size: 20px;
+      text-align: center;
+      margin-top: 400px;
+
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 17px;
+        margin: 30px 0px 5px 0px;
+      }
     }
   }
 }

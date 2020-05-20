@@ -2,16 +2,18 @@
   .content
     .header
       Constrution Matchi
-      .nav
+
+    .nav-box
+      .top
         = link_to "トップページに戻る", :back, class: 'btn'
+      .new-user
         = link_to "新規登録", :new_user_registration, method: :get, class: 'btn'
+      .login
         = link_to "ログイン", :new_user_session, method: :get, class: 'btn'
       
     .main
-
-    .fooder
       %h3 ・・・・・建設業者専用マッチングアプリ・・・・・
-      %h4 人手が欲しい...。
-      %h5 もっと仕事が欲しい...。
-      %h6 そんな皆様の
-      %h7 需要と供給を満たします！！！
+      %p 人手が欲しい...。
+      %p もっと仕事が欲しい...。
+      %p そんな皆様の
+      %p 需要と供給を満たします！！！
